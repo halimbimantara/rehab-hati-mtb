@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+    <ImageView
+            android:id="@+id/cardImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/baseline_image_black_24" />
+
+    <ImageView
+            android:id="@+id/imageView132"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/black_alpha_70" />
+
+    <TextView
+            android:id="@+id/newsTitleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="40dp"
+            android:fontFamily="@font/roboto"
+            android:lineSpacingExtra="4sp"
+            android:text="**** **** **** ****"
+            android:textAlignment="viewStart"
+            android:textColor="@color/md_white_1000"
+            android:textSize="@dimen/font_h7_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cardImageView"
+            app:layout_constraintStart_toStartOf="@+id/cardImageView"
+            tools:ignore="RtlCompat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="comment"
+            type="com.pusatruq.muttabaah.ui.main.scorring.model.ScoreTop" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ln_width"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/md_grey_100" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TvNumberHole"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#345709"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/TvMaxScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/md_green_700"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="7sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/TvInputScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:padding="7dp"
+                    android:text="12"
+                    android:textColor="@color/black_85"
+                    android:textSize="8sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/md_grey_800" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/md_grey_800" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

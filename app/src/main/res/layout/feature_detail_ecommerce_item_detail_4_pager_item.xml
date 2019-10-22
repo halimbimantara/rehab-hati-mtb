@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="220dp"
+        android:layout_height="70dp">
+
+        <TextView
+            android:id="@+id/placeNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Place Name"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorTextLight"
+            android:textSize="@dimen/font_body_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/placeImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlCompat" />
+
+        <ImageView
+            android:id="@+id/ratingImageView"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:tint="@color/md_yellow_600"
+            app:layout_constraintStart_toEndOf="@+id/placeImageView"
+            app:layout_constraintTop_toBottomOf="@+id/placeNameTextView"
+            app:srcCompat="@drawable/baseline_star_24"
+            tools:ignore="RtlCompat" />
+
+        <TextView
+            android:id="@+id/ratingTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="5.6 / 10 Ratings"
+            android:textAlignment="viewStart"
+            android:textColor="@color/colorTextLight"
+            android:textSize="@dimen/font_body_s_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ratingImageView"
+            app:layout_constraintTop_toBottomOf="@+id/placeNameTextView"
+            tools:ignore="RtlCompat" />
+
+        <ImageView
+            android:id="@+id/placeImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/baseline_image_black_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+<!--        <variable-->
+<!--                name="listener"-->
+<!--                type="com.kotlin.mvvm.gogolf.ui.component.adapter.NewsListener"-->
+<!--                />-->
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/roots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:padding="@dimen/padding_normal">
+
+        <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_85"
+                android:textSize="@dimen/text_medium"
+                android:maxLines="2"
+                app:layout_constraintBottom_toTopOf="@id/tv_author"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_55"
+                android:layout_marginTop="@dimen/padding_small"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintBottom_toTopOf="@id/tv_time"
+                app:layout_constraintTop_toBottomOf="@id/tv_title"/>
+
+        <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_55"
+                android:layout_marginTop="@dimen/padding_small"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_author"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

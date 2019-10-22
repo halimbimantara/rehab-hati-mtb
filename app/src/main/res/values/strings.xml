@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Muttabaah</string>
+    <string name="btn_login">Login</string>
+    <string name="title_home">Muttabaah</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="food_delivery">Food Delivery</string>
+    <string name="agree">Yes</string>
+    <string name="disagree">No</string>
+    <string name="week_mode">Week mode</string>
+
+    <string name="warning_info_pls_datacanempty">Isi data lengkap !!</string>
+    <!--    <string name="default_web_client_id">AIzaSyB-S_4zQDuzSTBDx9oq3371UiSYCbRIwUQ</string>-->
+</resources>

@@ -1,0 +1,136 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    defaultConfig {
+        applicationId "com.pusatruq.muttabaah"
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        kapt {
+            arguments {
+                arg("room.schemaLocation", "$projectDir/schemas".toString())
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    // Android support
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation deps.support.recyclerview
+    implementation deps.support.constraintlayout
+    implementation 'com.google.android.material:material:1.1.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    implementation "androidx.core:core-ktx:1.2.0-alpha02"
+    implementation "androidx.browser:browser:1.0.0"
+
+    //navigation
+    implementation deps.navigator.fragments
+    implementation deps.navigator.fragments_ktx
+    implementation deps.navigator.navigation_ui
+    implementation deps.navigator.navigation_ui_ktx
+
+    //network
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    // Testing
+    testImplementation deps.testing.junit
+    testImplementation deps.testing.mock_core
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //dialog
+    implementation 'com.afollestad.material-dialogs:core:3.1.1'
+    // Multidex
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    // Kotlin
+    implementation deps.kotlin.stdlib
+
+    // Life cycle
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.1.0"
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
+    kapt 'androidx.lifecycle:lifecycle-compiler:2.1.0'
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
+
+    // Room
+    implementation 'androidx.room:room-runtime:2.1.0'
+    implementation 'androidx.room:room-rxjava2:2.1.0'
+    kapt 'androidx.room:room-compiler:2.1.0'
+
+
+    //imageslider
+    implementation 'com.github.smarteist:autoimageslider:1.3.2'
+
+    // Dagger2
+    implementation deps.dagger.runtime
+    implementation deps.dagger.android
+    implementation deps.dagger.android_support
+    kapt deps.dagger.compiler
+    kapt deps.dagger.android_processor
+
+    // OkHttp and Retrofit
+    implementation deps.okhttp.runtime
+    implementation deps.okhttp.logging
+    implementation deps.retrofit.runtime
+    implementation deps.retrofit.rxjava2
+    implementation deps.retrofit.gson
+
+    // RxJava and RxAndroid
+    implementation deps.reactivex.rxjava2
+    implementation deps.reactivex.rxandroid
+
+    // Stetho for network debugging
+    implementation deps.stetho.runtime
+    implementation deps.stetho.okhttp
+
+    // Glide
+    implementation deps.glide.runtime
+    annotationProcessor deps.glide.compiler
+
+    //google maps
+
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.firebase:firebase-auth:19.1.0'
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.firebase:firebase-analytics:17.2.0'
+
+    //calendar
+    implementation 'com.github.kizitonwose:CalendarView:0.2.8'
+
+    //pref
+    implementation "com.afollestad:rxkprefs:1.2.5"
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+
+    //spinner
+    implementation 'com.jaredrummler:material-spinner:1.3.1'
+}
+apply plugin: 'com.google.gms.google-services'

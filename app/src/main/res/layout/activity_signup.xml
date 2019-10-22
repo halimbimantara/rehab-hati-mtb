@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.pusatruq.muttabaah.ui.main.accounts.viewmodels.SignUpViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/roots"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_color_green">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view55"
+                        tools:ignore="MissingConstraints" />
+
+                    <Button
+                        android:id="@+id/registerButton"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="12dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Register"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_title_size"
+                        android:theme="@style/PSButton.Blue600"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view55" />
+
+                    <Button
+                        android:id="@+id/loginButton"
+                        style="@style/PSButton.Default.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Sudah Punya akun"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_body_size"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <Button
+                        tools:ignore="MissingConstraints"
+                        android:id="@+id/helpButton"
+                        style="@style/PSButton.Default.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_body_size"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <View
+                        android:id="@+id/view60"
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/loginButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/registerButton" />
+
+                    <ImageView
+                        android:id="@+id/imageView98"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginEnd="8dp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/view55"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@color/white"
+                        app:cardCornerRadius="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView181">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/textView186"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="32dp"
+                                android:layout_marginEnd="16dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Username"
+                                android:textAlignment="viewStart"
+                                android:textAllCaps="true"
+                                android:textColor="@color/md_grey_500"
+                                android:textSize="@dimen/font_body_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <EditText
+                                android:id="@+id/Etusername"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="16dp"
+                                android:ems="10"
+                                android:fontFamily="@font/roboto"
+                                android:hint="UserName"
+                                android:inputType="textPersonName"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/md_grey_600"
+                                android:textColorHint="@color/md_grey_400"
+                                android:textSize="@dimen/font_body_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView186" />
+
+                            <TextView
+                                android:id="@+id/tvInfoFname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="16dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Full Name"
+                                android:textAlignment="viewStart"
+                                android:textAllCaps="true"
+                                android:textColor="@color/md_grey_500"
+                                android:textSize="@dimen/font_body_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/Etusername" />
+
+                            <EditText
+                                android:id="@+id/EtFullname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="16dp"
+                                android:ems="10"
+                                android:fontFamily="@font/roboto"
+                                android:hint="Fullname"
+                                android:inputType="textPersonName"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/md_grey_600"
+                                android:textColorHint="@color/md_grey_400"
+                                android:textSize="@dimen/font_body_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvInfoFname" />
+
+                            <TextView
+                                android:id="@+id/textView187"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Gender"
+                                android:textAlignment="viewStart"
+                                android:textAllCaps="true"
+                                android:textColor="@color/md_grey_500"
+                                android:textSize="@dimen/font_body_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/EtFullname" />
+
+                            <com.jaredrummler.materialspinner.MaterialSpinner
+                                android:id="@+id/SpinGender"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="12dp"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/md_grey_600"
+                                android:textColorHint="@color/md_grey_400"
+                                android:textSize="@dimen/font_body_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView187" />
+
+                            <TextView
+                                android:id="@+id/textView198"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Email"
+                                android:textAlignment="viewStart"
+                                android:textAllCaps="true"
+                                android:textColor="@color/md_grey_500"
+                                android:textSize="@dimen/font_body_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/SpinGender" />
+
+                            <EditText
+                                android:id="@+id/etEmail"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="16dp"
+                                android:ems="10"
+                                android:fontFamily="@font/roboto"
+                                android:hint="Email"
+                                android:inputType="textEmailAddress"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/md_grey_600"
+                                android:textColorHint="@color/md_grey_400"
+                                android:textSize="@dimen/font_body_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/textView198" />
+
+
+                            <TextView
+                                android:id="@+id/tvNoHp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="No Hp"
+                                android:textAlignment="viewStart"
+                                android:textAllCaps="true"
+                                android:textColor="@color/md_grey_500"
+                                android:textSize="@dimen/font_body_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+                            <EditText
+                                android:id="@+id/etNoHp"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="16dp"
+                                android:ems="10"
+                                android:fontFamily="@font/roboto"
+                                android:inputType="phone"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/md_grey_600"
+                                android:textColorHint="@color/md_grey_400"
+                                android:textSize="@dimen/font_body_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvNoHp" />
+
+                            <TextView
+                                android:id="@+id/tvAlamat"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:fontFamily="@font/roboto"
+                                android:text="Address"
+                                android:textAlignment="viewStart"
+                                android:textAllCaps="true"
+                                android:textColor="@color/md_grey_500"
+                                android:textSize="@dimen/font_body_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/etNoHp" />
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                android:id="@+id/etAddress"
+                                android:layout_width="0dp"
+                                android:layout_height="100dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginEnd="16dp"
+                                android:ems="10"
+                                android:fontFamily="@font/roboto"
+                                android:gravity="top"
+                                android:inputType="textMultiLine"
+                                android:textColor="@color/md_grey_600"
+                                android:textColorHint="@color/md_grey_400"
+                                android:textDirection="firstStrong"
+                                android:textSize="@dimen/font_body_size"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvAlamat" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/textView181"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:text="Registrasi"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/font_h6_size"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView98" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

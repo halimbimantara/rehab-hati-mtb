@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+                name="viewModel"
+                type="com.pusatruq.muttabaah.ui.main.comment.CommentViewModel" />
+
+        <variable
+                name="adapter"
+                type="com.pusatruq.muttabaah.ui.component.adapter.CommentAdapter" />
+
+        <variable
+                name="navigationListener"
+                type="android.view.View.OnClickListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                app:navigationIcon="@drawable/ic_back"
+                app:navigationOnClickListener="@{navigationListener}"
+                app:title="@{viewModel.title}"
+                app:titleTextColor="@android:color/white"
+                tools:ignore="MissingConstraints"></androidx.appcompat.widget.Toolbar>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:isRefreshing="@{viewModel.isRefreshing}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                app:onRefreshListener="@{() -> viewModel.refreshComments()}">
+
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adapter="@{adapter}"
+                    app:addVerticalItemDecoration="@{true}"
+                    app:items="@{viewModel.items}"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

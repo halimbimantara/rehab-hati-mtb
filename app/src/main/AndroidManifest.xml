@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pusatruq.muttabaah">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:name=".BLApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Grafik"></activity>
+        <activity android:name=".ui.main.MainActivity" />
+        <activity android:name=".ui.AppHome" />
+        <activity
+            android:name=".ui.main.accounts.AccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.comment.CommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.sholat.activity.SholatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.scorring.DetailScoreActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.shop.activity.CheckoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.accounts.SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.shop.activity.CheckoutFinish"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.shop.activity.OrderHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.shop.activity.CheckoutPaymentFinishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.shop.activity.CheckoutPaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.shop.activity.DetailHistoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.shop.activity.DetailActivityShop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.shop.activity.MyBasketActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.main.accounts.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCC3nXBrXMky5OZVx4oB7G71vSqZFsbV7E" />
+    </application>
+
+</manifest>

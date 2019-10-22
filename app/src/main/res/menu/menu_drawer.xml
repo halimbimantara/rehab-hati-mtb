@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/grp5"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_drawer_profile"
+            android:icon="@drawable/ic_person_grey_24dp"
+            android:title="Profile" />
+    </group>
+    <group
+        android:visible="false"
+        android:id="@+id/grp1"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_drawer_home"
+            android:icon="@drawable/ic_home_grey_24dp"
+            android:title="Home" />
+    </group>
+    <group
+        android:visible="false"
+        android:id="@+id/grp2"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_drawer_shop"
+            android:icon="@drawable/ic_restaurant_grey_24dp"
+            android:title="Order History" />
+    </group>
+    <group
+        android:id="@+id/grp3"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_drawer_score"
+            android:icon="@drawable/ic_table_score_grey"
+            android:title="Calendar" />
+    </group>
+
+    <group
+        android:id="@+id/grp4"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_drawer_maps"
+            android:icon="@drawable/baseline_graph_black_24"
+            android:title="Grafik" />
+    </group>
+
+
+
+    <group
+        android:id="@+id/grp6"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_drawer_sharing"
+            android:icon="@drawable/baseline_share_dots_grey_24"
+            android:title="Sharing" />
+    </group>
+
+    <group
+        android:id="@+id/grp7"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_drawer_exit"
+            android:icon="@drawable/ic_power_grey"
+            android:title="Exit" />
+    </group>
+    <group></group>
+</menu>
