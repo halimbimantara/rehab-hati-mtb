@@ -1,6 +1,6 @@
 # Rehab Hati
 
-##Screenshoot
+## Screenshoot
 # Kotlin MVVM Boilerplate
 
 An Android boilerplate project with: Kotlin, MVVM, Dagger2, RxJava, Retrofit, Kotshi and more.
