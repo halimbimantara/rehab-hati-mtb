@@ -10,6 +10,7 @@ An Android boilerplate project with: Kotlin, MVVM, Dagger2, RxJava, Retrofit, Ko
 - Dependency injection: Dagger2
 - Network: Retrofit, RxJava, Moshi and Kotshi
 - Testing: JUnit, Espresso, Mockito
+- Library Support : MaterialDialog,Rxpreferences,Navigation
 
 
 ## License
